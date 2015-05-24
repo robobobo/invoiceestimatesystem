@@ -14,6 +14,7 @@
 		</div>
 	</div>
 	<div class="row">
+		<form action="save.php" method="post">
 		<div class="medium-2 columns">
 			<input type="text" name="date" id="" placeholder="Enter Date" value="<?php echo Date('dS M y');?>">
 		</div>
@@ -65,6 +66,12 @@
 			<span id="total-amount">Total</span>
 		</div>
 	</div>
+	<div class="row">
+		<div class="medium-4 columns">
+			<input type="submit" value="Save" class="button">
+		</div>
+	</div>
+	</form>
 
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation.min.js"></script>
