@@ -13,8 +13,20 @@
 			<h1>Vision Landscapes Invoice Estimate System</h1>
 		</div>
 	</div>
-	<div class="row">
 		<form action="save.php" method="post">
+	<div class="row">
+		<div class="medium-4 columns">
+			Is this an invoice or an estimate?
+		</div>
+		<div class="medium-6 columns">
+
+			<select name="type" id="type">
+				<option value="estimate">Estimate</option>
+				<option value="invoice">Invoice</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
 		<div class="medium-2 columns">
 			<input type="text" name="date" id="" placeholder="Enter Date" value="<?php echo Date('dS M y');?>">
 		</div>
@@ -31,10 +43,10 @@
 	</div>
 	<div class="row">
 		<div class="medium-10 columns">
-			<input type="text" name="description" placeholder="Item description">
+			<input type="text" name="description[]" placeholder="Item description">
 		</div>
 		<div class="medium-2 columns">
-			<input type="text" name="price" class="last-element price" placeholder="Price">
+			<input type="text" name="price[]" class="last-element price" placeholder="Price">
 		</div>
 	</div>
 	<div class="row">
@@ -47,7 +59,7 @@
 			Sub-total
 		</div>
 		<div class="medium-2 columns">
-			<span id="sub-total-amount">Sub-Total</span>
+			<input type="text" name="sub-total-amount" id="sub-total-amount" readonly>
 		</div>
 	</div>
 	<div class="row" id="vat">
@@ -55,7 +67,8 @@
 			Vat @ 13.50%
 		</div>
 		<div class="medium-2 columns">
-			<span id="vat-amount">Vat</span>
+			
+			<input type="text" name="vat" id="vat-amount" readonly>
 		</div>
 	</div>
 	<div class="row" id="total">
@@ -63,7 +76,7 @@
 			Total
 		</div>
 		<div class="medium-2 columns">
-			<span id="total-amount">Total</span>
+			<input type="text" name="total-amount" id="total-amount" readonly>
 		</div>
 	</div>
 	<div class="row">
@@ -78,23 +91,20 @@
 	<script>
 	$(document).foundation();
 	$(document).ready(function(){
+		var newRow = '<div class="row">\
+				<div class="medium-9 columns"><input type="text" name="description[]" placeholder="Item description"></div>\
+				<div class="medium-2 columns"><input type="text" name="price[]" class="last-element price" placeholder="Price"></div>\
+				<div class="medium-1 columns"><input type="checkbox" name="remove[]" class="remove" /></div>\
+				</div>';
 		$("#add-new").on('click',function(){
-			$(this).parent().parent().before('<div class="row">\
-				<div class="medium-9 columns"><input type="text" name="description" placeholder="Item description"></div>\
-				<div class="medium-2 columns"><input type="text" name="price" class="last-element price" placeholder="Price"></div>\
-				<div class="medium-1 columns"><input type="checkbox" name="remove" class="remove" /></div>\
-				</div>'); 
+			$(this).parent().parent().before(newRow); 
 		})
 		$(document).on('click','.remove',function(){
 			$(this).parent().parent().remove();
 		})
 		$(document).on('keydown','.last-element',function(e){
 			if(e.keyCode == 9){
-				$(this).parent().parent().after('<div class="row">\
-				<div class="medium-9 columns"><input type="text" name="description" placeholder="Item description"></div>\
-				<div class="medium-2 columns"><input type="text" name="price" class="last-element price" placeholder="Price"></div>\
-				<div class="medium-1 columns"><input type="checkbox" name="remove" class="remove" /></div>\
-				</div>'); 
+				$(this).parent().parent().after(newRow); 
 			$(this).removeClass("last-element")
 			}
 		})
@@ -104,11 +114,11 @@
 			prices.each(function(i){
 				subTotal += parseFloat($(this).val());
 			})
-			$("#sub-total-amount").html(subTotal.toFixed(2));
+			$("#sub-total-amount").val(subTotal.toFixed(2));
 			var vat = parseFloat(subTotal*0.135)
-			$("#vat-amount").html(vat.toFixed(2));
+			$("#vat-amount").val(vat.toFixed(2));
 			var total = parseFloat(subTotal + vat);
-			$("#total-amount").html(total.toFixed(2))
+			$("#total-amount").val(total.toFixed(2))
 		})
 
 	});

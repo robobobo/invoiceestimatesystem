@@ -632,20 +632,26 @@
 	},
 	"file_history":
 	[
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/transientchecker.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/widget-recent.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/widget-tabs.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/api.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/introspector.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/checktransients.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/functions.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/widget-trending.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/widget-popular.php",
+		"/D/Programs/xampp/htdocs/vision/index.php",
+		"/D/Programs/xampp/htdocs/vision/includes/connection.php",
+		"/D/Programs/xampp/htdocs/vision/save.php",
+		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/transientchecker.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/api 2.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/introspector 2.php",
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/introspector.php",
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/api.php",
 		"/C/phonegap/json-api/singletons/query.php",
 		"/C/phonegap/agriland-app/www/index.html",
 		"/C/phonegap/agriland-app/www/assets/js/app.js",
 		"/C/phonegap/json-api/models/author.php",
 		"/C/phonegap/agriland-app/www/assets/css/style.css",
 		"/C/phonegap/agriland-app/www/config.xml",
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/checktransients.php",
 		"/C/phonegap/json-api/controllers/core.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/core 2.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/app-api.php",
@@ -653,7 +659,6 @@
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/JSON.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/json-api.php",
 		"/C/phonegap/agriland-app/www/.git/COMMIT_EDITMSG",
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/functions.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/page-special-event.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/footer.php",
 		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/style.css",
@@ -754,12 +759,7 @@
 		"/C/Users/robert/Desktop/ResponsiveSlides.js-master/ResponsiveSlides.js-master/demo/demo.html",
 		"/C/Users/robert/AppData/Local/Temp/7zO9979.tmp/wp-config.php",
 		"/C/Users/robert/Desktop/web_compromised_20140813154150/web_compromised_20140813154150/web_compromised/wp-config.php",
-		"/C/Users/robert/Desktop/web_compromised_20140813154150/web_compromised_20140813154150/web_compromised/wp-content/themes/nevada.old/revslider/views/templates/thematic.php",
-		"/C/Users/robert/Desktop/web_compromised_20140813154150/web_compromised_20140813154150/web_compromised/wp-content/plugins/woocommerce/templates/index.html",
-		"/C/Users/robert/Desktop/web_compromised_20140813154150/web_compromised_20140813154150/web_compromised/ticket-sales/wp-content/themes/twentyeleven/cf_paypal.php",
-		"/C/Users/robert/AppData/Local/Temp/fz3temp-1/posts.php",
-		"/C/Users/robert/Desktop/openssl-1.0.1i.tar/openssl-1.0.1i.tar",
-		"/C/phonegap/agriland-app/.cordova/config.json"
+		"/C/Users/robert/Desktop/web_compromised_20140813154150/web_compromised_20140813154150/web_compromised/wp-content/themes/nevada.old/revslider/views/templates/thematic.php"
 	],
 	"find":
 	{
@@ -778,6 +778,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"silent_publish",
 			"json_api_query",
 			"agriland.ie/",
 			"agriland.ie",
@@ -904,8 +905,7 @@
 			"getLatestSto",
 			"getLatest",
 			"getlatestStories",
-			"agriland.ie",
-			"gaP"
+			"agriland.ie"
 		],
 		"highlight": true,
 		"in_selection": false,
